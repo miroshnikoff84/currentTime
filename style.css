@@ -1,0 +1,24 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: rgb(0, 217, 255);
+    max-width: 700px;
+    height: 700px;
+
+}
+
+.greeting, .today, .current-time, .new-year {
+    outline: none;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 28px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 600px;
+    height: 50px;
+    background-color: rgba(69, 79, 209, 0.644);
+}
