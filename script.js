@@ -1,6 +1,6 @@
 'use strict';
 const times = () => {
-    let currentDate = new Date(),
+    let currentDate = new Date(), // используем объект Date
         newYear = new Date(2020, 11, 31),
         newYaerLeft = Math.ceil((newYear - currentDate) / 1000 / 60 / 60 / 24),
         day = currentDate.toLocaleString('ru', { weekday: 'long' }),
@@ -10,7 +10,7 @@ const times = () => {
         timesOfDay;
     
 
-    if (hours >= 5 && hours <= 11) {
+    if (hours >= 5 && hours <= 11) {   //проверка на часть суток
         timesOfDay = 'Доброе утро';
     } else if (hours > 11 && hours <= 17) {
         timesOfDay = 'Добрый день';
@@ -19,11 +19,11 @@ const times = () => {
     } else if (hours > 23 || hours < 5) {
         timesOfDay = 'Доброй ночи';
     }
-    let greeting = document.querySelector('.greeting'),
+    let greeting = document.querySelector('.greeting'), // получаем элементы страницы
         today = document.querySelector('.today'),
         currentTime = document.querySelector('.current-time'),
         newY = document.querySelector('.new-year');
-        greeting.value = timesOfDay;
+        greeting.value = timesOfDay;                // записываем значения
         today.value = `Сегодня: ${upDay}`;
         currentTime.value = `Текущее время: ${time}`;
         newY.value = `До Нового года осталось ${newYaerLeft} дней`;
